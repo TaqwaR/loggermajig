@@ -1,0 +1,31 @@
+{
+  "name": "loggermajig",
+  "version": "1.0.0",
+  "description": "an app that logs and saves user inputs to a sql database and displays inputs to the page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TaqwaR/loggermajig.git"
+  },
+  "keywords": [
+    "MySQL",
+    "handlebars",
+    "node.js",
+    "express.js"
+  ],
+  "author": "TR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TaqwaR/loggermajig/issues"
+  },
+  "homepage": "https://github.com/TaqwaR/loggermajig#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.15.0"
+  }
+}
