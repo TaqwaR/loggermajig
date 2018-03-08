@@ -42,7 +42,7 @@ const orm = {
 
 
 //selectAll()
-  all: function selectAll(tableInput, cb) {
+  selectAll: function(tableInput, cb) {
     const queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function(err, result) {
       if (err) {
@@ -54,7 +54,7 @@ const orm = {
 
 
 //insertOne()
-  insert: function insertOne(table, cols, vals, cb) {
+  insertOne: function(table, cols, vals, cb) {
     const queryString = "INSERT INTO " + table;
 
     queryString += " (";
@@ -76,7 +76,7 @@ const orm = {
   },
 
 //updateOne();
-  update: function updateOne(table, objColVals, condition, cb) {
+  updateOne: function(table, objColVals, condition, cb) {
     const queryString = "UPDATE " + table;
 
     queryString += " SET ";
