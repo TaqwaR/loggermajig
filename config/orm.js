@@ -93,7 +93,7 @@ const orm = {
       cb(result)
     });
 
-  };
+  }
 
 };
 
