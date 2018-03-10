@@ -1,3 +1,7 @@
+.my-header {
+  padding-top: 2em;
+}
+
 .book-cols {
   padding-bottom: 2em;
 }
@@ -23,4 +27,8 @@
 .footer-styles {
   padding-top: 2em;
   padding-bottom: 2em;
+}
+
+.book-list-style {
+  list-style-type: none;
 }

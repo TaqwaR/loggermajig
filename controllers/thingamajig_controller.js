@@ -30,7 +30,7 @@ router.post("/api/books", function(req, res) {
 
 router.put("/api/books/:id", function(req, res) {
   const condition = "id = " + req.params.id;
-  console.log("id + rq.params.id: ", condition);
+  console.log("id + req.params.id: ", condition);
 
   book.updateOne({
     read_status: req.body.read_status

@@ -1,16 +1,17 @@
 
 <div class="container">
 
-<header>
+<header class="my-header">
   <div class="text-center">
-    <img src="../public/assets/img/stacks.jpg" class="rounded" alt="stack of books">
+    <!-- <img src="../public/assets/img/stacks.jpg" class="rounded" alt="stack of books"> -->
+    <h3>📚📖📚</h3>
   </div>
 </header>
 
   <blockquote class="blockquote my-block-quote">
-    <p class="mb-0 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    <p class="mb-0 text-center">If we encounter a man of rare intellect, we should ask him what books he reads.</p>
 
-    <footer class="blockquote-footer text-right">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    <footer class="blockquote-footer text-right">Ralph Waldo Emerson</footer>
   </blockquote>
 
   <div class="row">
@@ -18,8 +19,8 @@
       <h2 class="text-center">Books to Read</h2>
       <ul>
         {{#each books}}
-          {{#unless read}}
-            {{books}}
+          {{#unless read_status}}
+            <li class="book-list-style"><span class="fas fa-book"></span> {{book_name}} by {{book_author}}</li>
           {{/unless}}
         {{/each}}
       </ul>
@@ -28,8 +29,8 @@
       <h2 class="text-center">Books Read</h2>
       <ul>
         {{#each books}}
-          {{#if read}}
-            {{books}}
+          {{#if read_status}}
+            {{book_name}} by {{book_author}}
           {{/if}}
         {{/each}}
       </ul>
@@ -45,10 +46,12 @@
     <form>
       <div class="row form-padding">
         <div class="col">
-          <input type="text" class="form-control" placeholder="Book Name">
+          <label for="book">Book Name</label>
+          <input type="text" id="book" name="name" class="form-control" placeholder="E.g. Milk and Honey">
         </div>
         <div class="col">
-          <input type="text" class="form-control" placeholder="Author">
+          <label for="author">Author</label>
+          <input type="text" id="author" name="author" class="form-control" placeholder="E.g. Rupi Kaur">
         </div>
       </div>
     </form>
