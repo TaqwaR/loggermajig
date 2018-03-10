@@ -32,9 +32,7 @@ router.put("/api/books/:id", function(req, res) {
   const condition = "id = " + req.params.id;
   console.log("id + req.params.id: ", condition);
 
-  book.updateOne({
-    read_status: req.body.read_status
-  }, condition, function(result) {
+  book.updateOne({ read_status: req.body.read_status }, condition, function(result) {
     if (result.changedRows === 0) {
       return res.status(404).end();
     } else {

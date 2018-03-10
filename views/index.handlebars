@@ -20,7 +20,9 @@
       <ul>
         {{#each books}}
           {{#unless read_status}}
-            <li class="book-list-style"><span class="fas fa-book"></span> {{book_name}} by {{book_author}}</li>
+            <li class="book-list-style"><span class="fas fa-book"></span> {{book_name}} by {{book_author}}
+            {{> books/update-read-status}}
+            </li>
           {{/unless}}
         {{/each}}
       </ul>
@@ -44,6 +46,7 @@
   </div>
   <div>
     <form>
+
       <div class="row form-padding">
         <div class="col">
           <label for="book">Book Name</label>
