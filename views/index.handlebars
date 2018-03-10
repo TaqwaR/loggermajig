@@ -1,58 +1,91 @@
 
 <div class="container">
 
+<header>
   <div class="text-center">
-    <img src="..." class="rounded" alt="...">
+    <img src="../public/assets/img/stacks.jpg" class="rounded" alt="stack of books">
   </div>
+</header>
 
-  <blockquote class="blockquote">
-    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <blockquote class="blockquote my-block-quote">
+    <p class="mb-0 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
 
-    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    <footer class="blockquote-footer text-right">Someone famous in <cite title="Source Title">Source Title</cite></footer>
   </blockquote>
 
-  <h2>Books to Read</h2>
-  <ul>
-    {{#each books}}
-      {{#unless read}}
-        {{Books}}
-      {{/unless}}
-    {{/each}}
-  </ul>
+  <div class="row">
+    <div class="col book-cols">
+      <h2 class="text-center">Books to Read</h2>
+      <ul>
+        {{#each books}}
+          {{#unless read}}
+            {{books}}
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col book-cols">
+      <h2 class="text-center">Books Read</h2>
+      <ul>
+        {{#each books}}
+          {{#if read}}
+            {{books}}
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
 
-  <h2>Books Read</h2>
-  <ul>
-    {{#each books}}
-      {{#if read}}
-        {{Books}}
-      {{/if}}
-    {{/each}}
-  </ul>
-
-  <h2>Add a Book</h2>
-  <form>
-    <div class="row">
-      <div class="col">
-        <input type="text" class="form-control" placeholder="Book Name">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 text-center">
+      <h2 class="text-center">Add a Book</h2>
+    </div>
+  </div>
+  <div>
+    <form>
+      <div class="row form-padding">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Book Name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Author">
+        </div>
       </div>
-      <div class="col">
-        <input type="text" class="form-control" placeholder="Author">
+    </form>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" value="0">
+        <label class="custom-control-label" for="customRadioInline1">To Read
+        </label>
       </div>
     </div>
-  </form>
 
-  <div class="custom-control custom-radio custom-control-inline">
-    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-    <label class="custom-control-label" for="customRadioInline1">To Read
-    </label>
-  </div>
-  
-  <div class="custom-control custom-radio custom-control-inline">
-    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-    <label class="custom-control-label" for="customRadioInline2">Read
-    </label>
+    <div class="col-md-6 text-center">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" value="1">
+        <label class="custom-control-label" for="customRadioInline2">Read
+        </label>
+      </div>
+    </div>
   </div>
 
-  <button type="button" class="btn btn-secondary btn-lg">Submit</button>
+  <div class="row submit-styles text-center">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+      <button type="button" class="btn btn-secondary btn-lg">Submit</button>
+    </div>
+    <div class="col-md-4">
+    </div>
+  </div>
+
+  <footer class="footer-styles">
+    <div class="row">
+
+    </div>
+  </footer>
 
 </div>
