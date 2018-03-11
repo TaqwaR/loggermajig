@@ -3,7 +3,7 @@ $(function() {
 
   $(".change-read-status").on("click", function(event) {
     let id = $(this).data("id");
-    let newStatus = $(this).data("read-status");
+    let newStatus = 1;
 
     console.log(id);
     console.log(newStatus);

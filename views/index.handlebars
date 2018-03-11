@@ -31,7 +31,10 @@
         {{#each books}}
         <!-- truth-y -->
           {{#if read_status}}
-            {{book_name}} by {{book_author}}
+            <li class="book-list-style">
+              <span class="fas fa-book"></span>
+              {{book_name}} by {{book_author}}
+            </li>
           {{/if}}
         {{/each}}
       </ul>
