@@ -20,8 +20,7 @@
         {{#each books}}
         <!-- false-y -->
           {{#unless read_status}}
-            <li class="book-list-style"><span class="fas fa-book"></span> {{book_name}} by {{book_author}} {{> books/update-read-status}}
-            </li>
+            {{> books/update-read-status}}
           {{/unless}}
         {{/each}}
       </ul>

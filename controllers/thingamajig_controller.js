@@ -14,6 +14,12 @@ router.get("/", function(req, res) {
   });
 });
 
+router.get("/api/books", function(req, res) {
+  book.selectAll(function(data) {
+    res.json({data});
+  })
+})
+
 
 
 router.post("/api/books", function(req, res) {

@@ -1,5 +1,11 @@
-<!-- <form action="thingamajig.js"> </form> -->
 
-<button type="button" class="finished-reading-btn change-read-status" data-id="{{this.id}}" data-read-status="{{read_status}}">
-  <p>Finished Reading</p>
-</button>
+<li class="book-list-style">
+  <span class="fas fa-book"></span>
+
+  {{book_name}} by {{book_author}}
+
+  <button type="button" class="finished-reading-btn change-read-status" data-id="{{id}}" data-read-status="{{read_status}}">
+    <p>Finished Reading</p>
+  </button>
+
+</li>
