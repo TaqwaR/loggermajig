@@ -3,7 +3,7 @@
 const orm = require("../config/orm");
 
 const book = {
-//read
+//read all
   selectAll: function(cb) {
     orm.selectAll("books", function(res) {
       cb(res);

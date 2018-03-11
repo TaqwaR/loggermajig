@@ -31,4 +31,19 @@
 
 .book-list-style {
   list-style-type: none;
+  margin-bottom: 1em;
+}
+
+.finished-reading-btn {
+  background-color: lightgray;
+  margin-left: 2em;
+}
+
+.finished-reading-btn p {
+  margin-bottom: 0;
+  font-size: 12px;
+}
+
+.my-category-styles {
+  margin-bottom: 1em;
 }

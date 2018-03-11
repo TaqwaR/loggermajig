@@ -3,7 +3,6 @@
 
 <header class="my-header">
   <div class="text-center">
-    <!-- <img src="../public/assets/img/stacks.jpg" class="rounded" alt="stack of books"> -->
     <h3>📚📖📚</h3>
   </div>
 </header>
@@ -16,21 +15,22 @@
 
   <div class="row">
     <div class="col book-cols">
-      <h2 class="text-center">Books to Read</h2>
+      <h2 class="text-center my-category-styles">Books to Read</h2>
       <ul>
         {{#each books}}
+        <!-- false-y -->
           {{#unless read_status}}
-            <li class="book-list-style"><span class="fas fa-book"></span> {{book_name}} by {{book_author}}
-            {{> books/update-read-status}}
+            <li class="book-list-style"><span class="fas fa-book"></span> {{book_name}} by {{book_author}} {{> books/update-read-status}}
             </li>
           {{/unless}}
         {{/each}}
       </ul>
     </div>
     <div class="col book-cols">
-      <h2 class="text-center">Books Read</h2>
+      <h2 class="text-center my-category-styles">Books Read</h2>
       <ul>
         {{#each books}}
+        <!-- truth-y -->
           {{#if read_status}}
             {{book_name}} by {{book_author}}
           {{/if}}
