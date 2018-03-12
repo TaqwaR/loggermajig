@@ -35,6 +35,23 @@ $(function() {
     console.log(newBookName);
     console.log(newAuthorName);
     console.log(newReadStatus);
+
+    let newBook = {
+      book_name: newBookName,
+      book_author: newAuthorName,
+      read_status: newReadStatus
+    }
+
+    $.ajax("/api/books/", {
+      type: "POST",
+      data: newBook
+    }).then(
+        function () {
+          console.log("Added new book.");
+          location.reload();
+        }
+    );
+
   });
 
 });

@@ -26,7 +26,7 @@ router.post("/api/books", function(req, res) {
   book.insertOne([
     "book_name", "book_author", "read_status"
   ], [
-    req.body.book_name, request.body.book_author, req.body.read_status
+    req.body.book_name, req.body.book_author, req.body.read_status
   ], function(result) {
     res.json({ id: result.insertId });
   });
