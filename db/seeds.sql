@@ -5,3 +5,4 @@ INSERT INTO books (book_name, book_author, read_status) VALUES ('Homegoing', 'Ya
 INSERT INTO books (book_name, book_author, read_status) VALUES ('Bloodchild', 'Octavia Butler', false);
 
 INSERT INTO books (book_name, book_author, read_status) VALUES ('Python Crash Course', 'Eric Matthes', false);
+ 

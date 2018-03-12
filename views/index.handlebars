@@ -3,19 +3,19 @@
 
 <header class="my-header">
   <div class="text-center">
-    <h3>📚📖📚</h3>
+    <h1>Log It Up 📖</h1>
   </div>
 </header>
 
   <blockquote class="blockquote my-block-quote">
-    <p class="mb-0 text-center">If we encounter a man of rare intellect, we should ask him what books he reads.</p>
+    <p class="mb-0 text-center">“The more that you read, the more things you will know. The more that you learn, the more places you'll go.</p>
 
-    <footer class="blockquote-footer text-right">Ralph Waldo Emerson</footer>
+    <footer class="blockquote-footer text-right">Dr. Seuss</footer>
   </blockquote>
 
   <div class="row">
     <div class="col book-cols">
-      <h2 class="text-center my-category-styles">Books to Read</h2>
+      <h3 class="text-center my-category-styles">Books to Read</h3>
       <ul>
         {{#each books}}
         <!-- false-y -->
@@ -26,15 +26,12 @@
       </ul>
     </div>
     <div class="col book-cols">
-      <h2 class="text-center my-category-styles">Books Read</h2>
+      <h3 class="text-center my-category-styles">Books Read</h3>
       <ul>
         {{#each books}}
         <!-- truth-y -->
           {{#if read_status}}
-            <li class="book-list-style">
-              <span class="fas fa-book"></span>
-              {{book_name}} by {{book_author}}
-            </li>
+            {{> books/return-to-list}}
           {{/if}}
         {{/each}}
       </ul>
@@ -43,7 +40,7 @@
 
   <div class="row">
     <div class="col-md-6 offset-md-3 text-center">
-      <h2 class="text-center">Add a Book</h2>
+      <h3 class="text-center">Add a Book</h3>
     </div>
   </div>
   <div>

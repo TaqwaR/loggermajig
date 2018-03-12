@@ -14,6 +14,7 @@ router.get("/", function(req, res) {
   });
 });
 
+
 router.get("/api/books", function(req, res) {
   book.selectAll(function(data) {
     res.json({data});
@@ -48,5 +49,4 @@ router.put("/api/books/:id", function(req, res) {
 });
 
 
-//how is this exporting the functions even though they aren't wrapped in curly braces?
 module.exports = router;

@@ -17,3 +17,4 @@ CREATE TABLE books(
   read_status BOOLEAN DEFAULT false,
   PRIMARY KEY (id)
 );
+ 

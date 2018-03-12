@@ -1,3 +1,18 @@
+
+
+body {
+  font-family: 'Anaheim', sans-serif;
+}
+
+h1 {
+  font-family: 'Ubuntu Mono', monospace;
+  font-weight: bolder;
+}
+
+h3 {
+  font-family: 'Ubuntu Mono', monospace;
+}
+
 .my-header {
   padding-top: 2em;
 }
@@ -9,6 +24,7 @@
 .my-block-quote {
   padding-top: 2em;
   padding-bottom: 2em;
+  font-family: 'Overpass Mono', monospace;
 }
 
 .form-padding {
@@ -35,13 +51,24 @@
 }
 
 .finished-reading-btn {
-  background-color: lightgray;
+  background-color: #be2196;
   margin-left: 2em;
 }
 
 .finished-reading-btn p {
   margin-bottom: 0;
   font-size: 12px;
+  font-weight: bolder;
+}
+
+.read-again {
+  background-color: #fdc560;
+}
+
+.read-again p {
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: bolder;
 }
 
 .my-category-styles {
