@@ -22,4 +22,22 @@ $(function() {
         }
     );
   });
+
+  const submitBtn = $(".submit-btn");
+
+  submitBtn.on("click", function(event) {
+    event.preventDefault();
+
+    let newBookName = $(".new-book-name").val();
+    let newAuthorName = $(".new-author-name").val();
+    let newReadStatus = $("form input[type='radio']:checked").val();
+
+    console.log(newBookName);
+    console.log(newAuthorName);
+    console.log(newReadStatus);
+  });
+
 });
+
+//not read = 0
+//read = 1

@@ -48,24 +48,24 @@
   </div>
   <div>
     <form>
-
       <div class="row form-padding">
         <div class="col">
           <label for="book">Book Name</label>
-          <input type="text" id="book" name="name" class="form-control" placeholder="E.g. Milk and Honey">
+          <input type="text" id="book" name="name" class="form-control new-book-name" placeholder="E.g. Milk and Honey">
         </div>
         <div class="col">
           <label for="author">Author</label>
-          <input type="text" id="author" name="author" class="form-control" placeholder="E.g. Rupi Kaur">
+          <input type="text" id="author new-author-name" name="author" class="form-control new-author-name" placeholder="E.g. Rupi Kaur">
         </div>
       </div>
     </form>
   </div>
 
+<form>
   <div class="row">
     <div class="col-md-6 text-center">
       <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" value="0">
+        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input not-read" value="No">
         <label class="custom-control-label" for="customRadioInline1">To Read
         </label>
       </div>
@@ -73,18 +73,19 @@
 
     <div class="col-md-6 text-center">
       <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" value="1">
+        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input has-read" value="Yes">
         <label class="custom-control-label" for="customRadioInline2">Read
         </label>
       </div>
     </div>
   </div>
+</form>
 
   <div class="row submit-styles text-center">
     <div class="col-md-4">
     </div>
     <div class="col-md-4">
-      <button type="button" class="btn btn-secondary btn-lg">Submit</button>
+      <button type="button" class="btn btn-secondary btn-lg submit-btn">Submit</button>
     </div>
     <div class="col-md-4">
     </div>
