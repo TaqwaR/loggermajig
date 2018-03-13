@@ -4,7 +4,7 @@ A (book) logging application for the bibliophiles. An easy way to keep track of 
 
 ## Screenshots
 
-![Screen Shot 2018-03-12 at 9.37.53 PM](/Users/taqwarushdan/Desktop/Screen Shot 2018-03-12 at 9.37.53 PM.png?raw=true "Log It Up UI")
+![log-it-up-ss](public/assets/img/log-it-up-ss.png?raw=true "Log It Up UI")
 
 ## Tech/Framework Used
 
