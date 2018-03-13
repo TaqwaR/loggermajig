@@ -73,9 +73,8 @@ The package.json file includes all environment dependicies that you'd need to ru
 - Step 1: Fork this repository and clone it to your local environment.
 - Step 2: Navigate to the cloned repo/folder and run `npm init`. Once the repo is initialized, run `npm install`. This will download all of the necessary dependencies.
 - Step 3: run node server.js, navigate to **\*localhost:3000*** on your favorite web browser, and the application should be up and running.
-- Step 4 (bonus): Open the files in your favorite text editor and customize the application even more!
-- Step 5 (bonus): Try it out here: <https://radiant-savannah-89554.herokuapp.com/>
-
+- Step 4: Try it out here: <https://radiant-savannah-89554.herokuapp.com/>
+- Step 5 (bonus): Open the files in your favorite text editor and customize the application even more!
 
 
 ## License
