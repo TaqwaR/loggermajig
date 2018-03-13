@@ -2,7 +2,7 @@
 
 A (book) logging application for the bibliophiles. An easy way to keep track of your reads!
 
-## Screenshots
+## Screenshot
 
 ![log-it-up-ss](public/assets/img/log-it-up-ss.png?raw=true "Log It Up UI")
 
