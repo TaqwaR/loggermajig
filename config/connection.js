@@ -1,11 +1,18 @@
 const mysql = require("mysql");
-const connection = mysql.createConnection({
-  port: process.env.PORT || 3306,
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "things_db"
-});
+let connection;
+
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  connection = mysql.createConnection({
+    port: process.env.PORT || 3306,
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "things_db"
+  });
+}
+
 
 connection.connect(function(err) {
   if (err) {
@@ -15,4 +22,4 @@ connection.connect(function(err) {
   console.log("connected as id " + connection.threadId);
 });
 
-module.exports = connection; 
+module.exports = connection;
