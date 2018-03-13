@@ -61,11 +61,6 @@ router.post("/api/books", function(req, res) {
 });
 ```
 
-
-## API Reference
-
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
-
 ## Installation and How To Use
 
 The package.json file includes all environment dependicies that you'd need to run the app locally. To get the app running locally: 
