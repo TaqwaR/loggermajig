@@ -9,7 +9,6 @@ router.get("/", function(req, res) {
       books: data
     };
     console.log(hbsObject);
-    //what is happening here?
     res.render("index", hbsObject);
   });
 });

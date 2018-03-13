@@ -1,61 +1,84 @@
 # Log-It-Up
 
-A (book) logging application built with MySQL, Node, Express, Handlebars and a custom ORM. Log-It-up's layout follows the Model View Controller (MVC) design pattern and uses Node and MySQL to query and route data into the app, and Handlebars to generate the dynamic HTML elements.
-
-
-
-## Motivation
-
-For the bibliophiles out there. An easy way to keeping track of your reads!
-
-
+A (book) logging application for the bibliophiles. An easy way to keep track of your reads!
 
 ## Screenshots
 
-Include logo/demo screenshot etc.
+![Screen Shot 2018-03-12 at 9.37.53 PM](/Users/taqwarushdan/Desktop/Screen Shot 2018-03-12 at 9.37.53 PM.png)
 
 ## Tech/framework used
 
-Ex. -
+Log-It-up's layout follows the Model View Controller (MVC) design pattern and uses Node and MySQL to query and route data into the app, and Handlebars to generate the dynamic HTML elements.
+
+
 
 **Built with**
 
-- [Electron](https://electron.atom.io/)
+- Node.js
+- Express.js
+- MySQL
+- Handlebars.js
+- Javascript & jQuery
+- Custom ORM
 
 ## Features
 
-What makes your project stand out?
+In the Book Name and Author inputs, type in the details of a book you'd like to read or a good book that you have already finished reading. Click `submit`, and your book will be sorted into the right list and displayed in the application.
+
+For those books you love to re-read,  you have the option of re-sorting the book and reading it again by clicking Read Again to add it back to the To Read column.
 
 ## Code Example
 
-Show what the library does as concisely as possible, developers should be able to figure out **how**your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+Using Express.js, here is how the application updates the read status on the API for any of the books included in either column:
 
-## Installation
+```javascript
+router.put("/api/books/:id", function(req, res) {
+  const condition = "id = " + req.params.id;
+  console.log("id + req.params.id: ", condition);
 
-Provide step by step series of examples and explanations about how to get a development env running.
+  book.updateOne({ read_status: req.body.read_status }, condition, function(result) {
+    if (result.changedRows === 0) {
+      return res.status(404).end();
+    } else {
+      res.status(200).end();
+    }
+  });
+});
+```
+
+
+And here is how requests to create a new item are sent to the application's API:
+
+```javascript
+router.post("/api/books", function(req, res) {
+  book.insertOne(
+  	["book_name", "book_author", "read_status"], 
+  	[req.body.book_name, req.body.book_author, req.body.read_status], 
+  	function(result) {
+   	 	 res.json({ id: result.insertId });
+     	}
+     );
+});
+```
+ 
 
 ## API Reference
 
 Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
 
-## Tests
+## Installation and How to use
 
-Describe and show how to run the tests with code examples.
+The package.json file includes all environment dependicies that you'd need to run the app locally. To get the app running locally: 
 
-## How to use?
+- Step 1: Fork this repository and clone it to your local environment.
+- Step 2: Navigate to the cloned repo/folder and run `npm init`. Once the repo is initialized, run `npm install`. This will download all of the necessary dependencies.
+- Step 3: run node server.js, navigate to **\*localhost:3000*** on your favorite web browser, and the application should be up and running.
+- Step 4 (bonus): Open the files in your favorite text editor and customize the application even more!
+- Step 5 (bonus): Try it out here: <https://young-oasis-64436.herokuapp.com/>
 
-If people like your project they’ll want to learn how they can use it. To do so include step by step guide to use your project.
 
-## Contribute
-
-Let people know how they can contribute into your project. A [contributing guideline](https://github.com/zulip/zulip-electron/blob/master/CONTRIBUTING.md) will be a big plus.
-
-## Credits
-
-Give proper credits. This could be a link to any repo which inspired you to build this project, any blogposts or links to people who contrbuted in this project.
-
-#### Anything else that seems useful
 
 ## License
 
-A short snippet describing the license (MIT, Apache etc)
+[Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
