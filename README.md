@@ -6,7 +6,7 @@ A (book) logging application for the bibliophiles. An easy way to keep track of 
 
 ![Screen Shot 2018-03-12 at 9.37.53 PM](/Users/taqwarushdan/Desktop/Screen Shot 2018-03-12 at 9.37.53 PM.png)
 
-## Tech/framework used
+## Tech/Framework Used
 
 Log-It-up's layout follows the Model View Controller (MVC) design pattern and uses Node and MySQL to query and route data into the app, and Handlebars to generate the dynamic HTML elements.
 
@@ -66,7 +66,7 @@ router.post("/api/books", function(req, res) {
 
 Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
 
-## Installation and How to use
+## Installation and How To Use
 
 The package.json file includes all environment dependicies that you'd need to run the app locally. To get the app running locally: 
 
@@ -74,7 +74,7 @@ The package.json file includes all environment dependicies that you'd need to ru
 - Step 2: Navigate to the cloned repo/folder and run `npm init`. Once the repo is initialized, run `npm install`. This will download all of the necessary dependencies.
 - Step 3: run node server.js, navigate to **\*localhost:3000*** on your favorite web browser, and the application should be up and running.
 - Step 4 (bonus): Open the files in your favorite text editor and customize the application even more!
-- Step 5 (bonus): Try it out here: <https://young-oasis-64436.herokuapp.com/>
+- Step 5 (bonus): Try it out here: <https://radiant-savannah-89554.herokuapp.com/>
 
 
 
